@@ -18,3 +18,11 @@ it('should render table tags', () => {
  const table = wrapper.find('.primes-table');
  expect(table.exists()).toEqual(true);
 })
+
+it('should match the snapshot', () => {
+ const component = renderer.create(
+  <TableContainer />
+ );
+ let tree = component.toJSON();
+ expect(tree).toMatchSnapshot();
+})
