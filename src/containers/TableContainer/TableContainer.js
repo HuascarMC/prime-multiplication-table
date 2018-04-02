@@ -18,7 +18,6 @@ getPrimes(number) {
 
  render() {
   this.getPrimes(this.props.number);
-  console.log(this.state.primes);
   return(
   <table className="primes-table">
    <TableRowComponent primes={this.state.primes}/>
