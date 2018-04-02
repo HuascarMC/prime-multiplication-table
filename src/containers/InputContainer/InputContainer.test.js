@@ -39,11 +39,8 @@ it('should have a number state', () => {
 
 it('should update state on input change', () => {
  const wrapper = shallow(<InputContainer />);
- const state = wrapper.state();
 
- const input = wrapper.find('.display-input-text');
- input.value = 10;
+ wrapper.find('.get-number-input').simulate('change', { target: {value: '1'} })
 
-
- expect(state.number).toEqual(input.text())
+ expect(wrapper.state().number).toEqual("1")
 })
