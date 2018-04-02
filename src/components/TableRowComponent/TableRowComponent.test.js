@@ -41,8 +41,8 @@ it('should be able to append rows together', () => {
  const wrapper = shallow(<TableRowComponent />);
  const instance = wrapper.instance();
 
- const result = [[<tr>[<td>{2}</td>,<td>{3}</td>]</tr>],[<tr>[<td>{4}</td>,<td>{6}</td>]</tr>]]
- expect(instance.appendRows([2,3]), result)
+ const result = [[<tr>[<td>{6}</td>,<td>{3}</td>]</tr>],[<tr>[<td>{4}</td>,<td>{6}</td>]</tr>]]
+ expect(instance.appendRows([2,3]).toEqual(1))
 })
 
 it('should be able to use primable class', () => {
@@ -67,12 +67,13 @@ it('should be able to use primable increaseArray method', () => {
  const primesArray = primable.getPrimes(10);
  const increasedArray = primable.increaseArray(primesArray, 3);
  const result = [6, 9, 15, 21, 27];
- expect(increasedArray, result);
+ expect(increasedArray).toEqual(result);
 })
 
 it('should be able to use primable is Prime method', () => {
  const wrapper = shallow(<TableRowComponent />);
  const primable = wrapper.state().primable
 
- expect(primable.isPrime(7), true);
+ const result = primable.isPrime(7);
+ expect(result).toEqual(true);
 })
