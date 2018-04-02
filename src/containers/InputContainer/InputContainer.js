@@ -1,4 +1,5 @@
 import React from 'react';
+import TableContainer from '../TableContainer/TableContainer.js'
 
 class InputContainer extends React.Component {
  constructor(props) {
@@ -23,8 +24,10 @@ updateNumber(evt) {
    <form className="get-number-form">
     <p className="display-input-text">{ this.state.number }</p>
     <input className="get-number-input" onChange={ this.updateNumber }/>
+    <TableContainer number={ this.state.number }/>
    </form>
-  )}
+   );
+  }
  }
 
 export default InputContainer;
