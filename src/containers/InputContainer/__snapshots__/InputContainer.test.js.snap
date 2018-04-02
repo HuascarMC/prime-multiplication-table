@@ -13,5 +13,10 @@ exports[`should match the snapshot 1`] = `
     className="get-number-input"
     onChange={[Function]}
   />
+  <table
+    className="primes-table"
+  >
+    <tbody />
+  </table>
 </form>
 `;
