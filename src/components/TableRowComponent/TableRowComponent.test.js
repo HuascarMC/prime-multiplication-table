@@ -61,3 +61,10 @@ it('should be able to use primable increaseArray method', () => {
  const result = [6, 9, 15, 21, 27];
  expect(increasedArray, result);
 })
+
+it('should be able to use primable is Prime method', () => {
+ const wrapper = shallow(<TableRowComponent />);
+ const primable = wrapper.state().primable
+
+ expect(primable.isPrime(7), true);
+})
