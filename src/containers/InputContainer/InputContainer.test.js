@@ -25,3 +25,9 @@ xit('should have state number 0', () => {
  const wrapper = shallow(<InputContainer />);
  expect(wrapper.state().number).to.equal(0);
 })
+
+xit('it should update state number', () => {
+ const wrapper = shallow(<InputContainer />);
+ wrapper.find('.get-number-input').simulate('click').simulateKeyPresses(9);
+ expect(wrapper.state().number).to.equal(9);
+})
