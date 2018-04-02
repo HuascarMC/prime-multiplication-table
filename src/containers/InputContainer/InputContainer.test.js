@@ -7,27 +7,43 @@ it('should render without crashing', () => {
  shallow(<InputContainer />);
 })
 
-it('should render render one form', () => {
+it('should render one form', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.find('.get-number-form').exists()).toEqual(true);
+ const form = wrapper.find('.get-number-form');
+ expect(form.exists()).toEqual(true);
 })
 
 it('should render input box', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.find('.get-number-input').exists()).toEqual(true);
+ const input = wrapper.find('.get-number-input');
+ expect(input.exists()).toEqual(true);
 })
 
 it('should render text displaying input', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.find('.display-input-text').exists()).toEqual(true);
-})
-
-it('should have a number state', () => {
- const wrapper = shallow(<InputContainer />);
- expect(wrapper.state().number).toEqual(0);
+ const displayText = wrapper.find('.display-input-text');
+ expect(displayText.exists()).toEqual(true);
 })
 
 it('it should display input default state', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.find('.display-input-text').text()).toEqual("0");
+ const displayText = wrapper.find('.display-input-text')
+ expect(displayText.text()).toEqual("0");
+})
+
+it('should have a number state', () => {
+ const wrapper = shallow(<InputContainer />);
+ const state = wrapper.state();
+ expect(state.number).toEqual(0);
+})
+
+it('should update state on input change', () => {
+ const wrapper = shallow(<InputContainer />);
+ const state = wrapper.state();
+
+ const input = wrapper.find('.display-input-text');
+ input.value = 10;
+
+
+ expect(state.number).toEqual(input.text())
 })
