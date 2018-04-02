@@ -39,6 +39,9 @@ addTags(array) {
 }
 
  render() {
+  if(this.props.primes) {
+   this.appendRows(this.props.primes)
+  }
   return(
    <tbody>
     {this.state.appendedRows}
