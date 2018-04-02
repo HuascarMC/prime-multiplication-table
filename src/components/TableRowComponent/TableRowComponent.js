@@ -39,7 +39,9 @@ addTags(array) {
 
  render() {
   return(
-  <div></div>
+   <tbody>
+    {this.state.appendedRows}
+   </tbody>
  )
  }
 }
