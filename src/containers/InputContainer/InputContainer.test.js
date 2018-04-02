@@ -27,8 +27,7 @@ it('should have a number state', () => {
  expect(wrapper.state().number).toEqual(0);
 })
 
-xit('it should update state number', () => {
+it('it should display input default state', () => {
  const wrapper = shallow(<InputContainer />);
- wrapper.find('.get-number-input').simulate('click').simulateKeyPresses(9);
- expect(wrapper.state().number).to.equal(9);
+ expect(wrapper.find('.display-input-text').text()).toEqual("0");
 })
