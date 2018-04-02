@@ -9,6 +9,11 @@ class TableRowComponent extends React.Component {
   }
 }
 
+generateRow(array) {
+ const taggedArray = this.addTags(array);
+ return <tr>{taggedArray}</tr>
+}
+
 addTags(array) {
  var result = array.map(function(value) {
   return(<td>{value}</td>)

@@ -13,13 +13,13 @@ it('has an initial current row state empty', () => {
  expect(state.currentRow.length).toEqual(0);
 })
 
-it('generates a row given an array', () => {
+it('generates a row given a tagged array', () => {
  const wrapper = shallow(<TableRowComponent />);
  const instance = wrapper.instance();
  const row = instance.generateRow([1,2,3]);
 
- // const result = <tr>[<td>1</td><td>2</td><td>3</td></tr>]</tr>
- expect(row).toEqual(1);
+ const result = <tr>{[<td>{1}</td>, <td>{2}</td>, <td>{3}</td>]}</tr>
+ expect(row).toEqual(result);
 })
 
 it('add tags to primes array', () => {
