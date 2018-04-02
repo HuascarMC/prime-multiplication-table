@@ -15,3 +15,8 @@ xit('should render input box', () => {
  const wrapper = shallow(<InputContainer />);
  expect(wrapper.find('.get-number-input').to.have.length(1));
 })
+
+xit('should render text displaying input', () => {
+ const wrapper = shallow(<InputContainer />);
+ expect(wrapper.find('.display-input-text').to.equal(0))
+})
