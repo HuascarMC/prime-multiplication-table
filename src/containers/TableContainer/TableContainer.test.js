@@ -12,3 +12,9 @@ it('has a primes array state', () => {
  const state = wrapper.state();
  expect(state.primes.length).toEqual(0)
 })
+
+it('should render table tags', () => {
+ const wrapper = shallow(<TableContainer />);
+ const table = wrapper.find('.primes-table');
+ expect(table.exists()).toEqual(true);
+})

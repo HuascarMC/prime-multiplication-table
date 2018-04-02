@@ -10,7 +10,11 @@ class TableContainer extends React.Component {
 }
 
  render() {
-  <div></div>
+  return(
+  <table className="primes-table">
+
+  </table>
+ )
  }
 }
 
