@@ -7,6 +7,12 @@ it('should render without crashing', () => {
  shallow(<TableRowComponent />);
 })
 
+it('should be instance of', () => {
+ const wrapper = shallow(<TableRowComponent />);
+ const instance = wrapper.instance();
+ expect(instance).toBeTruthy();
+})
+
 it('has an initial current row state empty', () => {
  const wrapper = shallow(<TableRowComponent />);
  const state = wrapper.state();
