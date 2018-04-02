@@ -15,8 +15,18 @@ it('has an initial current row state empty', () => {
 
 it('generates a row given an array', () => {
  const wrapper = shallow(<TableRowComponent />);
- const row = wrapper.generateRow([1,2,3]);
+ const instance = wrapper.instance();
+ const row = instance.generateRow([1,2,3]);
 
- const result = <tr><td>1</td><td>2</td><td>3</td></tr>
- expect(row).toEqual(result)
+ // const result = <tr>[<td>1</td><td>2</td><td>3</td></tr>]</tr>
+ expect(row).toEqual(1);
 })
+
+it('add tags to primes array', () => {
+ const wrapper = shallow(<TableRowComponent />);
+ const instance = wrapper.instance();
+ const primesWithTags = instance.addTags([1,2,3]);
+
+ const result = [<td>1</td><td>2</td><td>3</td>]
+ expect(primesWithTags).toEqual(result);
+}
