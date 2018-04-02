@@ -10,5 +10,5 @@ it('should render without crashing', () => {
 it('has a primes array state', () => {
  const wrapper = shallow(<TableContainer />);
  const state = wrapper.state();
- expect(state.primes().length).toEqual(0)
+ expect(state.primes.length).toEqual(0)
 })
