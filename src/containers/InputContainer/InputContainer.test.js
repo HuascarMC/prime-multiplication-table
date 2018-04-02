@@ -12,19 +12,19 @@ it('should render render one form', () => {
  expect(wrapper.find('.get-number-form').exists()).toEqual(true);
 })
 
-xit('should render input box', () => {
+it('should render input box', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.find('.get-number-input').to.have.length(1));
+ expect(wrapper.find('.get-number-input').exists()).toEqual(true);
 })
 
-xit('should render text displaying input', () => {
+it('should render text displaying input', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.find('.display-input-text').to.equal(0))
+ expect(wrapper.find('.display-input-text').exists()).toEqual(true);
 })
 
-xit('should have state number 0', () => {
+xit('should have a state', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.state().number).to.equal(0);
+ expect(wrapper.state().exists()).toEqual(true);
 })
 
 xit('it should update state number', () => {
