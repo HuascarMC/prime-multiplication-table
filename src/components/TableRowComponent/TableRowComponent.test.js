@@ -51,3 +51,13 @@ it('should be able to use primable getPrimes method', () => {
  const result = primable.getPrimes(10)
  expect(result.length).toEqual(5);
 })
+
+it('should be able to use primable increaseArray method', () => {
+ const wrapper = shallow(<TableRowComponent />);
+ const primable = wrapper.state().primable
+
+ const primesArray = primable.getPrimes(10);
+ const increasedArray = primable.increaseArray(primesArray, 3);
+ const result = [6, 9, 15, 21, 27];
+ expect(increasedArray, result);
+})
