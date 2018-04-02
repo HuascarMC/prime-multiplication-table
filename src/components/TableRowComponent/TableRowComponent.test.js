@@ -16,7 +16,7 @@ it('should be instance of', () => {
 it('has an initial current row state empty', () => {
  const wrapper = shallow(<TableRowComponent />);
  const state = wrapper.state();
- expect(state.currentRow.length).toEqual(0);
+ expect(state.appendedRows.length).toEqual(0);
 })
 
 it('generates a row given a tagged array', () => {

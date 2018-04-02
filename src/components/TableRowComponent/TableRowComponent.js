@@ -6,7 +6,7 @@ class TableRowComponent extends React.Component {
   super(props);
 
   this.state = {
-   currentRow: [],
+   appendedRows: [],
    primable: new Primable(),
   }
 }
