@@ -36,3 +36,10 @@ it('add tags to primes array', () => {
  const result = [<td>{1}</td>, <td>{2}</td>,<td>{3}</td>]
  expect(primesWithTags).toEqual(result);
 })
+
+it('should be able to use primable class', () => {
+ const wrapper = shallow(<TableRowComponent />);
+ const primable = wrapper.state().primable
+
+ expect(primable).toBeTruthy();
+})

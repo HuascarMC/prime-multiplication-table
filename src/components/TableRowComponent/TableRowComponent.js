@@ -1,4 +1,5 @@
 import React from 'react';
+var Primable = require('../../tools/primable/Primable.js');
 
 class TableRowComponent extends React.Component {
  constructor(props) {
@@ -6,6 +7,7 @@ class TableRowComponent extends React.Component {
 
   this.state = {
    currentRow: [],
+   primable: new Primable(),
   }
 }
 
