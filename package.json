@@ -13,8 +13,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "setupFiles": [
-    "./src/setupTests.js"
-  ]
+      "./src/setupTests.js"
+    ]
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
