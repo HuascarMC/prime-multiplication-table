@@ -43,3 +43,11 @@ it('should be able to use primable class', () => {
 
  expect(primable).toBeTruthy();
 })
+
+it('should be able to use primable getPrimes method', () => {
+ const wrapper = shallow(<TableRowComponent />);
+ const primable = wrapper.state().primable
+
+ const result = primable.getPrimes(10)
+ expect(result.length).toEqual(5);
+})
