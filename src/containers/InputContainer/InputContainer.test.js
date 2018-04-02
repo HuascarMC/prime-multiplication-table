@@ -1,8 +1,9 @@
 import React from 'react';
+import InputContainer from './InputContainer'
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
-xit('should render without crashing', () => {
+it('should render without crashing', () => {
  shallow(<InputContainer />);
 })
 
