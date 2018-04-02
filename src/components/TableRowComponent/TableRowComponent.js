@@ -7,7 +7,13 @@ class TableRowComponent extends React.Component {
   this.state = {
    currentRow: [],
   }
+}
 
+addTags(array) {
+ var result = array.map(function(value) {
+  return(<td>{value}</td>)
+ })
+ return result
 }
 
  render() {

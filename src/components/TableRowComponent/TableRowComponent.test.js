@@ -27,6 +27,6 @@ it('add tags to primes array', () => {
  const instance = wrapper.instance();
  const primesWithTags = instance.addTags([1,2,3]);
 
- const result = [<td>1</td><td>2</td><td>3</td>]
+ const result = [<td>{1}</td>, <td>{2}</td>,<td>{3}</td>]
  expect(primesWithTags).toEqual(result);
-}
+})
