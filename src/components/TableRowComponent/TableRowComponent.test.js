@@ -7,8 +7,8 @@ it('should render without crashing', () => {
  shallow(<TableRowComponent />);
 })
 
-it('has a initial current row state empty', () => {
- wrapper = shallow(<TableRowComponent/>);
- state = wrapper.state()
+it('has an initial current row state empty', () => {
+ const wrapper = shallow(<TableRowComponent />);
+ const state = wrapper.state();
  expect(state.currentRow.length).toEqual(0);
 })
