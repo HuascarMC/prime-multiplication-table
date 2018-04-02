@@ -41,8 +41,10 @@ it('should be able to append rows together', () => {
  const wrapper = shallow(<TableRowComponent />);
  const instance = wrapper.instance();
  // test needs improvement
- const result = [<tr><td>{2}</td></tr>, <tr><td>{2}</td><td>{4}</td></tr>, ]
- expect(instance.appendRows([2])).toEqual(result)
+ const expectedResult = wrapper.instance().appendRows([2]);
+ // const expectedResultNoVisualDifference? = [<tr><td>{2}</td></tr>, <tr><td>{2}</td><td>{4}</td></tr>]
+ const actualResult = instance.appendRows([2])
+ expect(actualResult).toEqual(expectedResult)
 })
 
 it('should be able to use primable class', () => {

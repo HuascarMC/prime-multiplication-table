@@ -18,6 +18,7 @@ appendRows(array) {
     this.state.appendedRows.push(firstRow);
    } else {
     var increasedArray = this.state.primable.increaseArray(array, array[i]);
+    increasedArray.unshift(array[i])
     var followingRow = this.generateRow(increasedArray);
     this.state.appendedRows.push(followingRow);
     return this.state.appendedRows;
