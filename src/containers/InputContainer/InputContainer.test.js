@@ -52,3 +52,11 @@ it('should update display user input', () => {
 
  expect(wrapper.find('.display-input-text').text()).toEqual('20')
 })
+
+it('should match the snapshot', () => {
+ const component = renderer.create(
+  <InputContainer />
+ );
+ let tree = component.toJSON();
+ expect(tree).toMatchSnapshot();
+})

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<form
+  className="get-number-form"
+>
+  <p
+    className="display-input-text"
+  >
+    0
+  </p>
+  <input
+    className="get-number-input"
+    onChange={[Function]}
+  />
+</form>
+`;
