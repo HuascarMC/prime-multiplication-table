@@ -4,6 +4,9 @@ class InputContainer extends React.Component {
  constructor(props) {
   super(props);
 
+  this.state = {
+   number: 0,
+  }
 }
 
  render() {

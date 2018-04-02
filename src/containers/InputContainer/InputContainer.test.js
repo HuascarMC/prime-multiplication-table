@@ -22,9 +22,9 @@ it('should render text displaying input', () => {
  expect(wrapper.find('.display-input-text').exists()).toEqual(true);
 })
 
-xit('should have a state', () => {
+it('should have a number state', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.state().exists()).toEqual(true);
+ expect(wrapper.state().number).toEqual(0);
 })
 
 xit('it should update state number', () => {
