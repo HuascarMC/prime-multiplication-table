@@ -20,3 +20,8 @@ xit('should render text displaying input', () => {
  const wrapper = shallow(<InputContainer />);
  expect(wrapper.find('.display-input-text').to.equal(0))
 })
+
+xit('should have state number 0', () => {
+ const wrapper = shallow(<InputContainer />);
+ expect(wrapper.state().number).to.equal(0);
+})
