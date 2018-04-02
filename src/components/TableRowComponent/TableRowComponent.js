@@ -27,7 +27,7 @@ appendRows(array) {
 
 generateRow(array) {
  const taggedArray = this.addTags(array);
- return <tr>{taggedArray}</tr>
+ return (<tr>{taggedArray}</tr>)
 }
 
 addTags(array) {

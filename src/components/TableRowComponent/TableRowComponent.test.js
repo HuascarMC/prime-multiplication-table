@@ -40,9 +40,8 @@ it('add tags to primes array', () => {
 it('should be able to append rows together', () => {
  const wrapper = shallow(<TableRowComponent />);
  const instance = wrapper.instance();
-
- const result = [[<tr>[<td>{6}</td>,<td>{3}</td>]</tr>],[<tr>[<td>{4}</td>,<td>{6}</td>]</tr>]]
- expect(instance.appendRows([2,3]).toEqual(1))
+ // test needs improvement
+ expect(instance.appendRows([2,3]).length).toEqual(2)
 })
 
 it('should be able to use primable class', () => {
