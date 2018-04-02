@@ -31,7 +31,7 @@ it('it should display input default state', () => {
  expect(displayText.text()).toEqual("0");
 })
 
-it('should have a number state', () => {
+it('has an initial number state of zero', () => {
  const wrapper = shallow(<InputContainer />);
  const state = wrapper.state();
  expect(state.number).toEqual(0);
