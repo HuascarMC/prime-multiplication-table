@@ -19,14 +19,14 @@ describe('Primable', function () {
 
  it('should get all prime numbers from zero to a given number', function () {
   const number = 10;
-  result = primable.getPrimes(number)
-  assert.strictEqual(result.length, 5);
+  result = [2, 3, 5, 7, 9]
+  assert.deepEqual(primable.getPrimes(number), result);
  });
 
  it('should increase array by a given value', function () {
   array = [2, 3, 5, 7, 9]
   result = primable.increaseArray(array, 2)
-  assert.strictEqual(result, array)
+  assert.deepEqual(result, [4, 6, 10, 14, 18])
  });
 
 });
