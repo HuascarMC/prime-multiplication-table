@@ -8,7 +8,7 @@ class InputContainer extends React.Component {
 
  render() {
   return(
-   <div></div>
+   <form className="get-number-form">a</form>
   )}
  }
 

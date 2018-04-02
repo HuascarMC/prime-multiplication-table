@@ -7,9 +7,9 @@ it('should render without crashing', () => {
  shallow(<InputContainer />);
 })
 
-xit('should render render one form', () => {
+it('should render render one form', () => {
  const wrapper = shallow(<InputContainer />);
- expect(wrapper.find('.get-number-form').to.have.length(1));
+ expect(wrapper.find('.get-number-form').exists()).toEqual(true);
 })
 
 xit('should render input box', () => {
