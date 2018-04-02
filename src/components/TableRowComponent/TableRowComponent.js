@@ -14,6 +14,7 @@ class TableRowComponent extends React.Component {
 appendRows(array) {
   for(var i = -1; i < array.length; i++) {
    if (i == -1) {
+    array.push(0)
     var firstRow = this.generateRow(array);
     this.state.appendedRows.push(firstRow);
    } else {
@@ -39,7 +40,7 @@ addTags(array) {
 }
 
  render() {
-  if(this.props.primes) {
+  if(this.props.primes && this.props.primes != 0) {
    this.appendRows(this.props.primes)
   }
   return(
