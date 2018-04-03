@@ -25,10 +25,10 @@ it('should render text displaying input', () => {
  expect(displayText.exists()).toEqual(true);
 })
 
-it('it should display input default state', () => {
+it('it should inform the user about table current state', () => {
  const wrapper = shallow(<InputContainer />);
  const displayText = wrapper.find('.display-input-text')
- expect(displayText.text()).toEqual("0");
+ expect(displayText.text()).toEqual("This is a multiplication table for the prime numbers from zero to 0");
 })
 
 it('has an initial number state of zero', () => {
@@ -76,5 +76,5 @@ it('DEPRECATED: shoul tell user to input a value less than five-hundred', () => 
  const input = wrapper.find('.get-number-input');
  // needs improvement, can't change value of input from text when having e.prevent default attribute.
  wrapper.find('.get-number-input').simulate('change', {target: {value: 501} })
- expect(wrapper.state().number).toEqual(0);
+ expect(wrapper.find('.display-input-text').text()).toEqual("0");
 })
