@@ -67,3 +67,10 @@ it('should have an initial unique key state of zero', () => {
 
  expect(uniqueKey).toEqual(0);
 })
+
+it('should have a generateNewKey method', () => {
+ const wrapper = shallow(<TableContainer />);
+ const instance = wrapper.instance();
+ instance.generateNewKey();
+ expect(wrapper.state().uniqueKey, 1);
+})
