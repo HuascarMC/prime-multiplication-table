@@ -6,7 +6,7 @@ git clone https://github.com/HuascarMC/prime-multiplication-table
 ```
 - Go inside your prime-multiplication-table directory.
 ```
-cd prime-multiplication-TableContainer
+cd prime-multiplication-table
 ```
 - Install all the packages required.
 ```
@@ -27,7 +27,7 @@ http://localhost:3000
 - The app will display an input box, you should be able to get a prime multiplication table by typing a number 0 < 500
 and pressing enter.
 
-[!alt text]https://ibb.co/fEcOCH
+![alt text](images/screenshot.png)
 
 ## Functionality
 
