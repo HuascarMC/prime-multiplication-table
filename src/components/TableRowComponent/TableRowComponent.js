@@ -27,14 +27,14 @@ appendRows(array) {
  }
 }
 
-generateRow(array) {
- const taggedArray = this.addTags(array);
+generateRow(array, cssClass) {
+ const taggedArray = this.addTags(array, cssClass);
  return (<tr>{taggedArray}</tr>)
 }
 
-addTags(array) {
+addTags(array, cssClass) {
  var result = array.map(function(value) {
-  return(<td>{value}</td>)
+  return(<td className={cssClass}>{value}</td>)
  })
  return result
 }
