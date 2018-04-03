@@ -39,16 +39,20 @@ it('has an initial number state of zero', () => {
 
 it('should update state on input change', () => {
  const wrapper = shallow(<InputContainer />);
+ const input = wrapper.find('.get-number-input');
 
- wrapper.find('.get-number-input').simulate('change', { target: {value: '1'} })
+ input.simulate('change', { target: {value: '1'} })
+ input.simulate('submit')
 
  expect(wrapper.state().number).toEqual("1")
 })
 
 it('should update display user input', () => {
  const wrapper = shallow(<InputContainer />);
+ const input = wrapper.find('.get-number-input');
 
- wrapper.find('.get-number-input').simulate('change', {target: {value: '20'} })
+ input.simulate('change', { target: {value: '20'} })
+ input.simulate('submit')
 
  expect(wrapper.find('.display-input-text').text()).toEqual('20')
 })
