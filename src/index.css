@@ -14,8 +14,12 @@ td {
  text-align: center;
 }
 
-.boardIndex {
+.indexCells {
  background-color: rgb(47, 152, 170)
+}
+
+.multipliedCells {
+ background-color: rgb(226, 157, 25)
 }
 
 input {

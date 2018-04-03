@@ -20,8 +20,8 @@ appendRows(array) {
     this.state.appendedRows.push(firstRow);
    } else {
     var increasedArray = this.state.primable.increaseArray(array, array[i]);
-    increasedArray.unshift(array[i])
-    var followingRow = this.generateRow(increasedArray,"multipliedCells");
+    increasedArray.unshift(<td className="indexCells">{array[i]}</td>)
+    var followingRow = this.generateRow(increasedArray, "multipliedCells");
     this.state.appendedRows.push(followingRow);
   }
  }
