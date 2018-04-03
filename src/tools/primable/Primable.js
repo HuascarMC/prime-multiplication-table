@@ -16,6 +16,9 @@ Primable.prototype.getPrimes = function(number) {
     result.push(i);
    }
   }
+  if (this.isPrime(number)) {
+   result.push(number)
+  }
  return result;
 }
 
