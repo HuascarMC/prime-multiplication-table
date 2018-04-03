@@ -31,9 +31,9 @@ it('generates a row given a tagged array', () => {
 it('add tags to primes array', () => {
  const wrapper = shallow(<TableRowComponent />);
  const instance = wrapper.instance();
- const primesWithTags = instance.addTags([1,2,3]);
+ const primesWithTags = instance.addTags([1,2,3], "test");
 
- const result = [<td>{1}</td>, <td>{2}</td>,<td>{3}</td>]
+ const result = [<td className="test">{1}</td>, <td className="test">{2}</td>,<td className="test">{3}</td>]
  expect(primesWithTags).toEqual(result);
 })
 
