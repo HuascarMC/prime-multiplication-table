@@ -22,9 +22,9 @@ it('has an initial current row state empty', () => {
 it('generates a row given a tagged array', () => {
  const wrapper = shallow(<TableRowComponent />);
  const instance = wrapper.instance();
- const row = instance.generateRow([1,2,3]);
+ const row = instance.generateRow([1,2,3], "test");
 
- const result = <tr>{[<td>{1}</td>, <td>{2}</td>, <td>{3}</td>]}</tr>
+ const result = <tr>{[<td className="test">{1}</td>, <td className="test">{2}</td>, <td className="test">{3}</td>]}</tr>
  expect(row).toEqual(result);
 })
 
