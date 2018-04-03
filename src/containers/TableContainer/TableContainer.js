@@ -9,8 +9,11 @@ class TableContainer extends React.Component {
   this.state = ({
    primes: [],
    primable: new Primable,
+   uniqueKey: 0,
   })
 }
+
+
 
 getPrimes(number) {
  this.state.primes = this.state.primable.getPrimes(number);
