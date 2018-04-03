@@ -45,6 +45,7 @@ and pressing enter.
 
 # Things to improve/currently working on.
 
+
 - Add more tests and improve existing test suites. Some of the tests require mocking. For example,
 when adding 'e.preventDefault' to prevent the input/form from reloading the page. Some tests complained. One possible solution would be using 'spy' to see if this callback would be called.
 
