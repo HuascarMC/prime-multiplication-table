@@ -24,8 +24,9 @@ getPrimes(number) {
 
  render() {
   this.getPrimes(this.props.number);
+   this.generateNewKey();
   return(
-  <table className="primes-table">
+  <table className="primes-table" key={this.state.uniqueKey}>
    <TableRowComponent primes={this.state.primes}/>
   </table>
  )

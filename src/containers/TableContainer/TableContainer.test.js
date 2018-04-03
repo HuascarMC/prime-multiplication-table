@@ -61,11 +61,11 @@ it('should be able to use primable is Prime method', () => {
  expect(result).toEqual(true);
 })
 
-it('should have an initial unique key state of zero', () => {
+it('should have an initial unique key state of one', () => {
  const wrapper = shallow(<TableContainer />);
  const uniqueKey = wrapper.state().uniqueKey
 
- expect(uniqueKey).toEqual(0);
+ expect(uniqueKey).toEqual(1);
 })
 
 it('should have a generateNewKey method', () => {
