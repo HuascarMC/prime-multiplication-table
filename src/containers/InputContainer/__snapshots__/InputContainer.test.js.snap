@@ -8,6 +8,7 @@ exports[`should match the snapshot 1`] = `
   <p
     className="display-input-text"
   >
+    This is a multiplication table for the prime numbers from zero to 
     0
   </p>
   <input

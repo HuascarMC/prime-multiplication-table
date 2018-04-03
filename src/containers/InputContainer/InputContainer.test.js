@@ -52,7 +52,7 @@ it('DEPRECATED: should update display user input', () => {
 
  input.simulate('submit', { preventDefault: () => {}, target: {value: '20'} })
  // needs improvement, can't change value of input from text when having e.prevent default attribute.
- expect(wrapper.find('.display-input-text').text()).toEqual("0")
+ expect(wrapper.find('.display-input-text').text()).toEqual("This is a multiplication table for the prime numbers from zero to 0")
 })
 
 it('should match the snapshot', () => {
@@ -76,5 +76,5 @@ it('DEPRECATED: shoul tell user to input a value less than five-hundred', () => 
  const input = wrapper.find('.get-number-input');
  // needs improvement, can't change value of input from text when having e.prevent default attribute.
  wrapper.find('.get-number-input').simulate('change', {target: {value: 501} })
- expect(wrapper.find('.display-input-text').text()).toEqual("0");
+ expect(wrapper.find('.display-input-text').text()).toEqual("This is a multiplication table for the prime numbers from zero to 0");
 })

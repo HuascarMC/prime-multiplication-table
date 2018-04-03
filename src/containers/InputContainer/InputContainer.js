@@ -22,7 +22,7 @@ updateNumber(evt) {
  render() {
   return(
    <form onSubmit={e => { e.preventDefault(); }} className="get-number-form">
-    <p className="display-input-text">{ this.state.number }</p>
+    <p className="display-input-text">This is a multiplication table for the prime numbers from zero to { this.state.number }</p>
     <input onSubmit={e => { e.preventDefault(); }} className="get-number-input" onKeyPress={ this.updateNumber }/>
     <TableContainer number={ this.state.number }/>
    </form>
