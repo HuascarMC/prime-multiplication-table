@@ -14,8 +14,9 @@ class TableRowComponent extends React.Component {
 appendRows(array) {
   for(var i = -1; i < array.length; i++) {
    if (i == -1) {
-    array.push(0)
-    var firstRow = this.generateRow(array);
+    var indexArray = array.slice();
+    indexArray.unshift("Good");
+    var firstRow = this.generateRow(indexArray);
     this.state.appendedRows.push(firstRow);
    } else {
     var increasedArray = this.state.primable.increaseArray(array, array[i]);
