@@ -13,6 +13,9 @@ class TableContainer extends React.Component {
   })
 }
 
+generateNewKey() {
+ this.state.uniqueKey += 1;
+}
 
 
 getPrimes(number) {
