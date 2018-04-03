@@ -13,9 +13,15 @@ class InputContainer extends React.Component {
 
 updateNumber(evt) {
  if(evt.key === 'Enter') {
+  if(evt.target.value < 501) {
    this.setState({
-    number: evt.target.value
+    number: evt.target.value,
    })
+  } else {
+   this.setState({
+    number: "input should be below 501"
+   })
+   }
   }
 }
 
