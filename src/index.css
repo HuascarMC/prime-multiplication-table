@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: rgb(236, 214, 66);
+  background-color: rgb(201, 201, 201)
 }
 
 
@@ -15,11 +15,11 @@ td {
 }
 
 .indexCells {
- background-color: rgb(47, 152, 170)
+ background-color: rgb(66, 138, 182)
 }
 
 .multipliedCells {
- background-color: rgb(226, 157, 25)
+ background-color: rgb(159, 179, 193)
 }
 
 input {
