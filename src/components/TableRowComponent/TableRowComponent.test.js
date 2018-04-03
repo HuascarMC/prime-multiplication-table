@@ -79,3 +79,11 @@ it('should be able to use primable is Prime method', () => {
  const result = primable.isPrime(7);
  expect(result).toEqual(true);
 })
+
+it('should match the snapshot', () => {
+ const component = renderer.create(
+  <TableRowComponent />
+ );
+ let tree = component.toJSON();
+ expect(tree).toMatchSnapshot();
+})
