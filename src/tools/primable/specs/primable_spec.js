@@ -29,4 +29,10 @@ describe('Primable', function () {
   assert.deepEqual(result, [4, 6, 10, 14, 18])
  });
 
+ it('should get all prime numbers from zero to a given number and INCLUDE that number if prime', function() {
+  const number = 15;
+  result = [2, 3, 5, 7, 9, 11, 13, 15];
+  assert.deepEqual(primable.getPrimes(number), result)
+ })
+
 });
