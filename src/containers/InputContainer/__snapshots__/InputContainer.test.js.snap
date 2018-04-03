@@ -3,6 +3,7 @@
 exports[`should match the snapshot 1`] = `
 <form
   className="get-number-form"
+  onSubmit={[Function]}
 >
   <p
     className="display-input-text"
@@ -11,7 +12,8 @@ exports[`should match the snapshot 1`] = `
   </p>
   <input
     className="get-number-input"
-    onChange={[Function]}
+    onKeyPress={[Function]}
+    onSubmit={[Function]}
   />
   <table
     className="primes-table"

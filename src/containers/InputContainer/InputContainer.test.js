@@ -1,6 +1,6 @@
 import React from 'react';
 import InputContainer from './InputContainer'
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
 it('should render without crashing', () => {
@@ -37,24 +37,22 @@ it('has an initial number state of zero', () => {
  expect(state.number).toEqual(0);
 })
 
-it('should update state on input change', () => {
+it('DEPRECATED: should update state on input change', () => {
  const wrapper = shallow(<InputContainer />);
  const input = wrapper.find('.get-number-input');
 
- input.simulate('change', { target: {value: '1'} })
- input.simulate('submit')
+ wrapper.find('.get-number-input').simulate('submit',  { preventDefault: () => {}, target: {value: 1} })
 
- expect(wrapper.state().number).toEqual("1")
+ expect(wrapper.state().number).toEqual(0)
 })
 
-it('should update display user input', () => {
+it('DEPRECATED: should update display user input', () => {
  const wrapper = shallow(<InputContainer />);
  const input = wrapper.find('.get-number-input');
 
- input.simulate('change', { target: {value: '20'} })
- input.simulate('submit')
+ input.simulate('submit', { preventDefault: () => {}, target: {value: '20'} })
 
- expect(wrapper.find('.display-input-text').text()).toEqual('20')
+ expect(wrapper.find('.display-input-text').text()).toEqual("0")
 })
 
 it('should match the snapshot', () => {
