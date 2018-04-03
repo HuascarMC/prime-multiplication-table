@@ -16,12 +16,12 @@ appendRows(array) {
    if (i == -1) {
     var indexArray = array.slice();
     indexArray.unshift("Good");
-    var firstRow = this.generateRow(indexArray);
+    var firstRow = this.generateRow(indexArray, "indexCells");
     this.state.appendedRows.push(firstRow);
    } else {
     var increasedArray = this.state.primable.increaseArray(array, array[i]);
     increasedArray.unshift(array[i])
-    var followingRow = this.generateRow(increasedArray);
+    var followingRow = this.generateRow(increasedArray,"multipliedCells");
     this.state.appendedRows.push(followingRow);
   }
  }
