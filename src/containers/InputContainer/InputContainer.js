@@ -12,18 +12,18 @@ class InputContainer extends React.Component {
 }
 
 updateNumber(evt) {
- if(evt.key === 'Enter') {
+ // if(evt.key === 'Enter') {
    this.setState({
     number: evt.target.value
    })
-  }
+  // }
 }
 
  render() {
   return(
-   <form onSubmit={e => { e.preventDefault(); }} className="get-number-form">
+   <form className="get-number-form">
     <p className="display-input-text">{ this.state.number }</p>
-    <input onSubmit={e => { e.preventDefault(); }} className="get-number-input" onKeyPress={ this.updateNumber }/>
+    <input className="get-number-input" onChange={ this.updateNumber }/>
     <TableContainer number={ this.state.number }/>
    </form>
    );

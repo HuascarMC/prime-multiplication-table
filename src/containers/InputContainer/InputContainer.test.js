@@ -28,7 +28,7 @@ it('should render text displaying input', () => {
 it('it should display input default state', () => {
  const wrapper = shallow(<InputContainer />);
  const displayText = wrapper.find('.display-input-text')
- expect(displayText.text()).toEqual("This is a multiplication table of prime numbers from zero to 0");
+ expect(displayText.text()).toEqual("0");
 })
 
 it('has an initial number state of zero', () => {
