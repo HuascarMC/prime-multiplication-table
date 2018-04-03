@@ -4,6 +4,8 @@ exports[`should match the snapshot 1`] = `
 <table
   className="primes-table"
 >
-  <tbody />
+  <tbody>
+    <tr />
+  </tbody>
 </table>
 `;
