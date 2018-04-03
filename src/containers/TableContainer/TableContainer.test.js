@@ -60,3 +60,10 @@ it('should be able to use primable is Prime method', () => {
  const result = primable.isPrime(7);
  expect(result).toEqual(true);
 })
+
+it('should have a unique key state', () => {
+ const wrapper = shallow(<TableContaner />);
+ const uniqueKey = wrapper.state().uniqueKey
+
+ expect(uniqueKey).toBeTruthy();
+})
