@@ -16,6 +16,10 @@ npm i
 ```
 npm test
 ```
+Press 'a' to run all tests:
+```
+a
+```
 - Open another terminal tab and run the server.
 ```
 npm start
