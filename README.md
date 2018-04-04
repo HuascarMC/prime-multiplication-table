@@ -2,7 +2,7 @@
 
 - Clone this repo into your local machine.
 ```
-git clone https://github.com/HuascarMC/prime-multiplication-table
+git clone https://github.com/HuascarMC/prime-multiplication-table-react
 ```
 - Go inside your prime-multiplication-table-react directory.
 ```
