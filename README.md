@@ -4,7 +4,7 @@
 ```
 git clone https://github.com/HuascarMC/prime-multiplication-table
 ```
-- Go inside your prime-multiplication-table directory.
+- Go inside your prime-multiplication-table-react directory.
 ```
 cd prime-multiplication-table
 ```
