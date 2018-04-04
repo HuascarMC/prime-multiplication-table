@@ -6,7 +6,7 @@ git clone https://github.com/HuascarMC/prime-multiplication-table-react
 ```
 - Go inside your prime-multiplication-table-react directory.
 ```
-cd prime-multiplication-table
+cd prime-multiplication-table-react
 ```
 - Install all the packages required.
 ```
