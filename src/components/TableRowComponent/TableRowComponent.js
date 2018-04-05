@@ -1,13 +1,13 @@
 import React from 'react';
-var Primable = require('../../tools/primable/Primable.js');
+var ArrayChanger = require('../../tools/arraychanger/array_changer.js');
 
 class TableRowComponent extends React.Component {
  constructor(props) {
   super(props);
-// It has an appended rows state and uses primable tool.
+// It has an appended rows state and uses arrayChanger tool.
   this.state = {
    appendedRows: [],
-   primable: new Primable(),
+   arrayChanger: new ArrayChanger(),
   }
 }
 // This method appends the rows that will be rendered to represent the multiplication table given
@@ -20,7 +20,7 @@ appendRows(array) {
     var firstRow = this.generateRow(indexArray, "indexCells");
     this.state.appendedRows.push(firstRow);
    } else {
-    var increasedArray = this.state.primable.increaseArray(array, array[i]);
+    var increasedArray = this.state.arrayChanger.increaseArray(array, array[i]);
     increasedArray.unshift(<td className="indexCells">{array[i]}</td>)
     var followingRow = this.generateRow(increasedArray, "multipliedCells");
     this.state.appendedRows.push(followingRow);

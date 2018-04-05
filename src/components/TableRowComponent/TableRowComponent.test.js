@@ -47,19 +47,11 @@ it('should be able to append rows together', () => {
  expect(actualResult).toEqual(expectedResult)
 })
 
-it('should be able to use primable class', () => {
+it('should be able to use arrayChanger class', () => {
  const wrapper = shallow(<TableRowComponent />);
- const primable = wrapper.state().primable
+ const arrayChanger = wrapper.state().arrayChanger
 
- expect(primable).toBeTruthy();
-})
-
-it('should be able to use primable getPrimes method', () => {
- const wrapper = shallow(<TableRowComponent />);
- const primable = wrapper.state().primable
-
- const result = primable.getPrimes(10)
- expect(result.length).toEqual(5);
+ expect(arrayChanger).toBeTruthy();
 })
 
 it('should be able to use arrayChanger increaseArray method', () => {
@@ -70,14 +62,6 @@ it('should be able to use arrayChanger increaseArray method', () => {
  const increasedArray = arrayChanger.increaseArray(primesArray, 3);
  const result = [6, 9, 15, 21, 27];
  expect(increasedArray).toEqual(result);
-})
-
-it('should be able to use primable is Prime method', () => {
- const wrapper = shallow(<TableRowComponent />);
- const primable = wrapper.state().primable
-
- const result = primable.isPrime(7);
- expect(result).toEqual(true);
 })
 
 it('should match the snapshot', () => {
