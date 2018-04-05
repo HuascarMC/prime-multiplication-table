@@ -10,7 +10,7 @@ class InputContainer extends React.Component {
   }
   this.updateNumber = this.updateNumber.bind(this);
 }
-
+// Updates the number property in state when input value changes.
 updateNumber(evt) {
  if(evt.key === 'Enter') {
    this.setState({
@@ -20,6 +20,8 @@ updateNumber(evt) {
 }
 
  render() {
+ // Renders a form to get user input and passes the value of state to props table container.
+
   return(
    <form onSubmit={e => { e.preventDefault(); }} className="get-number-form">
     <p className="display-input-text">This is a multiplication table for the prime numbers from zero to { this.state.number }</p>
