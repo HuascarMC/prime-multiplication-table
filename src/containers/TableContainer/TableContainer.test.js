@@ -43,16 +43,6 @@ it('should be able to use primable getPrimes method', () => {
  expect(result.length).toEqual(5);
 })
 
-it('should be able to use primable increaseArray method', () => {
- const wrapper = shallow(<TableContainer />);
- const primable = wrapper.state().primable
-
- const primesArray = primable.getPrimes(10);
- const increasedArray = primable.increaseArray(primesArray, 3);
- const result = [6, 9, 15, 21, 27];
- expect(increasedArray).toEqual(result);
-})
-
 it('should be able to use primable is Prime method', () => {
  const wrapper = shallow(<TableContainer />);
  const primable = wrapper.state().primable
