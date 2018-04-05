@@ -19,11 +19,5 @@ Primable.prototype.getPrimes = function(number) {
  return result;
 }
 
-Primable.prototype.increaseArray = function(array, value) {
- return array.map(function(number) {
-  return(number*value)
- })
-}
-
 
 module.exports = Primable;
